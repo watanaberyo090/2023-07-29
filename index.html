@@ -10,8 +10,6 @@
     </style>
   </head>
   <body>
-    <div id="timeContainer" style="position: absolute; top: 10px; right: 10px; font-size: 24px; color: white;"></div>
-    <div id="score" style="position: absolute; top: 10px; left: 10px; font-size: 24px; color: white;"></div>
     <!-- three.jsのcanvas要素を配置するための場所 -->
     <div id="canvas-container"></div>
     <script type="importmap">
@@ -46,13 +44,6 @@
       //コントローラー
       let controller1, controller2;
       let controllerGrip1, controllerGrip2;
-      
-      // 秒数を表示するテキスト要素を取得
-      const timeContainer = document.getElementById("timeContainer");
-      const container = document.createElement( 'div' );
-		 document.body.appendChild( container );
-      //時間60秒になったら停止するための変数
-      let shouldStopRendering = false;
 
       // WebXRのポリフィルを有効にする
       const polyfill = new WebXRPolyfill();
@@ -389,10 +380,6 @@ const rayOrigin = new THREE.Vector3();
 
 // 初回のレンダリングループの開始
 renderer.setAnimationLoop(render);
-    </script>
-  </body>
-</html>
-
     </script>
   </body>
 </html>
